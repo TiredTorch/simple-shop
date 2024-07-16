@@ -1,7 +1,3 @@
-
-
 export const LoginForm = () => {
-  return (
-    <div>LoginForm</div>
-  )
-}
+    return <div>LoginForm</div>;
+};

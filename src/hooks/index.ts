@@ -1,1 +1,1 @@
-export * from "./useGetTranslation/useGetTranslation"
+export * from "./useGetTranslation/useGetTranslation";

@@ -4,25 +4,26 @@ import uk from "@/i18n/uk.json";
 
 const translations = {
     en,
-    uk
-}
+    uk,
+};
 
 const defaultTranslationData = {
     translation: translations["en"],
-    language: "en"
-}
+    language: "en",
+};
 
 export const useGetTranslation = () => {
     const translationData = defaultTranslationData;
 
-    const routeParams = useParams()
+    const routeParams = useParams();
 
-    const currentLanguage = routeParams?.["lang"] as string | undefined
+    const currentLanguage = routeParams?.["lang"] as string | undefined;
 
     if (currentLanguage && currentLanguage in translations) {
-        translationData.language = currentLanguage
-        translationData.translation = translations?.[currentLanguage as keyof typeof translations]
-    } 
+        translationData.language = currentLanguage;
+        translationData.translation =
+            translations?.[currentLanguage as keyof typeof translations];
+    }
 
-    return translationData
-}
+    return translationData;
+};
