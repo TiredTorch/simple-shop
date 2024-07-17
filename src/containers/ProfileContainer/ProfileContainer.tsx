@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { Button, CreditCardForm } from "@/components";
+import { Button, CreditCardForm, MiddlePositionContaner } from "@/components";
 
+//TODO config all images with widht and src
 export const ProfileContainer = () => {
     return (
-        <div className="h-[calc(100dvh-6rem)] bg-slate-400 w-2/3 m-auto px-4 py-6 flex flex-col items-center justify-between">
+        <MiddlePositionContaner>
             <div className="flex w-full">
                 <Image alt="avatar" src={""} className="w-3/5" />
                 <div className="flex flex-col items-center w-2/5 gap-4">
@@ -25,6 +26,6 @@ export const ProfileContainer = () => {
                 <Button buttonVariation="profileButton">Cart</Button>
                 <Button buttonVariation="profileButton">Orders</Button>
             </div>
-        </div>
+        </MiddlePositionContaner>
     );
 };

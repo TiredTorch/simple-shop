@@ -38,3 +38,11 @@ body {
         hover:border-slate-600 
         hover:text-slate-800;
 }
+
+.cartItemButton {
+    @apply border-slate-600 
+        text-slate-700 
+        bg-slate-500
+        hover:border-slate-700 
+        hover:text-slate-900;
+}

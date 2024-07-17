@@ -1,5 +1,7 @@
+import { CartContainer } from "@/containers";
+
 const Page = () => {
-    return <div>Page</div>;
+    return <CartContainer />;
 };
 
 export default Page;
