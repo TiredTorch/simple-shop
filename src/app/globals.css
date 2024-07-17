@@ -23,6 +23,7 @@ body {
 
 .modalButton {
     @apply font-semibold 
+        text-2xl
         border-slate-500 
         text-slate-600 
         hover:border-slate-600 
@@ -45,4 +46,14 @@ body {
         bg-slate-500
         hover:border-slate-700 
         hover:text-slate-900;
+}
+
+.authButton {
+    @apply text-3xl
+        duration-500
+        border-slate-400 
+        text-slate-600 
+        bg-slate-200
+        hover:border-slate-600 
+        hover:text-slate-800;
 }

@@ -8,5 +8,6 @@ export type ButtonProps = DetailedHTMLProps<
         | "headerButton"
         | "modalButton"
         | "profileButton"
-        | "cartItemButton";
+        | "cartItemButton"
+        | "authButton";
 };

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FC } from "react";
-
 import { ProductItemProps } from "./ProductItem.types";
 
 const ProductItem: FC<ProductItemProps> = ({
@@ -10,8 +9,8 @@ const ProductItem: FC<ProductItemProps> = ({
     handleSelectComponent,
 }) => {
     return (
-        <div //TODO gradient gradation to bottom
-            className="bg-slate-300 border-slate-500 border-2 rounded-md w-64 h-40 flex flex-col justify-between cursor-pointer"
+        <div
+            className="bg-gradient-to-tl from-slate-300 to-slate-400 border-cyan-600 border-2 rounded-md w-64 h-40 flex flex-col justify-between cursor-pointer"
             onClick={handleSelectComponent}
         >
             <div className="flex w-full h-3/5">
@@ -20,9 +19,7 @@ const ProductItem: FC<ProductItemProps> = ({
                     {price}$
                 </div>
             </div>
-            <div //TODO overflow with text to dots
-                className="w-full h-2/5 text-cyan-600 indent-3 p-2"
-            >
+            <div className="w-full h-2/5 text-cyan-600 indent-3 p-2 overflow-ellipsis overflow-hidden whitespace-nowrap">
                 {name}
             </div>
         </div>

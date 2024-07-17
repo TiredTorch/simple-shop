@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ProductComponent } from "@/types";
 import { ProductDetailsModal } from "./ProductDetailsModal/ProductDetailsModal";
 import ProductItem from "./ProductItem/ProductItem";
@@ -9,7 +9,7 @@ export const ProductsContainer = () => {
     const [selectedProductItem, setSelectedProductItem] =
         useState<ProductComponent | null>(null);
 
-    // TODO check if it already works as useCallback
+    // TODO check if it already works as useCallback (-)
     const resetProductItemSelection = () => {
         setSelectedProductItem(null);
     };
@@ -18,14 +18,18 @@ export const ProductsContainer = () => {
         setSelectedProductItem(productItem);
     };
 
-    //TODO install faker
-    const testProduct: ProductComponent = {
-        image: "",
-        price: 220,
-        description:
-            "asd asd as fas df sd f sd fs df sd f sd fs dfsdfasdasdas asdas d asfsdfsd fsdfsd",
-        name: "aaaaaa",
-    };
+    // TODO check faker with next js
+    const testProduct: ProductComponent = useMemo(
+        () => ({
+            image: "",
+            price: 220,
+            description:
+                "asd asd as fas df sd f sd fs df sd f sd fs dfsdfasdasdas asdas d asfsdfsd fsdfsd",
+            // name: faker.lorem.words(3),
+            name: "dasfjaskjf jasdhflkjs dkjsdhf lsslkdjfhs ikjh sdfsdf sdfsd fsdfdssdfddfsfdsfsdfsd",
+        }),
+        []
+    );
 
     return (
         <>

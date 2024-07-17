@@ -1,5 +1,9 @@
+import Link from "next/link";
+
 export const Logo = () => {
     return (
-        <div className="text-slate-300 font-bold text-2xl">SimpleShop.com</div>
+        <Link className="text-slate-300 font-bold text-2xl" href="/en/products">
+            SimpleShop.com
+        </Link>
     );
 };

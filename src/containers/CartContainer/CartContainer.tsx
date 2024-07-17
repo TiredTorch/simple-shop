@@ -1,8 +1,13 @@
+"use client";
+import { useRouter } from "next/navigation";
+import { useCallback } from "react";
 import { MiddlePositionContaner } from "@/components";
 import { CartItemComponent } from "@/types";
 import { CartItem } from "./CartItem/CartItem";
 
 export const CartContainer = () => {
+    const router = useRouter();
+
     const cartItemMock = {
         image: "",
         name: "apple",
@@ -10,10 +15,17 @@ export const CartContainer = () => {
         pricePerOne: 42,
     };
 
-    const handleOrderCartItem =
-        (cartItem: CartItemComponent) => (updatedAmount: number) => {};
+    const handleOrderCartItem = useCallback(
+        (cartItem: CartItemComponent) => (updatedAmount: number) => () => {
+            router.push("/en/checkout");
+        },
+        []
+    );
 
-    const handleRemoveCartItem = (cartItem: CartItemComponent) => () => {};
+    const handleRemoveCartItem = useCallback(
+        (cartItem: CartItemComponent) => () => {},
+        []
+    );
 
     return (
         <MiddlePositionContaner>

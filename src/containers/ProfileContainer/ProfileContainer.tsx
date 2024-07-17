@@ -1,8 +1,20 @@
+"use client";
 import Image from "next/image";
-import { Button, CreditCardForm, MiddlePositionContaner } from "@/components";
+import { useRouter } from "next/navigation";
+import { useCallback } from "react";
+import { Button, MiddlePositionContaner } from "@/components";
 
-//TODO config all images with widht and src
 export const ProfileContainer = () => {
+    const router = useRouter();
+
+    const handleNavigateToCart = useCallback(() => {
+        router.push("/en/cart");
+    }, [router]);
+
+    const handleNavigateToOrders = useCallback(() => {
+        router.push("/en/status");
+    }, [router]);
+
     return (
         <MiddlePositionContaner>
             <div className="flex w-full">
@@ -11,20 +23,28 @@ export const ProfileContainer = () => {
                     <div className="text-4xl text-cyan-700 font-bold">
                         Username
                     </div>
-                    <div //TODO space via escape sec
-                        className="text-2xl text-cyan-700 font-semibold"
-                    >
-                        Purchases:
+                    <div className="text-2xl text-cyan-700 font-semibold">
+                        Purchases:&nbsp;
                         <span className="text-cyan-800">2</span>
                     </div>
                 </div>
             </div>
             <div>
-                <CreditCardForm />
+                {/* <CreditCardForm onSubmit={console.log} initState={{}} /> */}
             </div>
             <div className="flex justify-evenly w-full">
-                <Button buttonVariation="profileButton">Cart</Button>
-                <Button buttonVariation="profileButton">Orders</Button>
+                <Button
+                    buttonVariation="profileButton"
+                    onClick={handleNavigateToCart}
+                >
+                    Cart
+                </Button>
+                <Button
+                    buttonVariation="profileButton"
+                    onClick={handleNavigateToOrders}
+                >
+                    Orders
+                </Button>
             </div>
         </MiddlePositionContaner>
     );

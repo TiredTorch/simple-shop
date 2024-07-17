@@ -13,19 +13,21 @@ export const ProductDetailsModal: FC<PropsForModal<ProductComponent>> = ({
 }) => {
     return (
         <ModalOverlay open>
-            <div>
-                <div>
-                    <Image src={image} alt={"product image"} />
-                    <div>
+            <div className="flex flex-col items-center justify-between gap-10">
+                <div className="flex justify-between gap-4">
+                    <Image
+                        src={image}
+                        alt={"product image"}
+                        className="w-2/5"
+                    />
+                    <div className="w-3/5 flex flex-col gap-2">
                         <div>{name}</div>
                         <div>{price}</div>
                         <div>{description}</div>
                     </div>
                 </div>
-                <div>
-                    <Button buttonVariation="modalButton">
-                        Order Selected
-                    </Button>
+                <div className="flex w-full justify-between">
+                    <Button buttonVariation="modalButton">Add to cart</Button>
                     <Button buttonVariation="modalButton" onClick={handleClose}>
                         Cancel
                     </Button>
