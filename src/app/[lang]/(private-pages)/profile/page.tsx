@@ -1,5 +1,7 @@
+import { ProfileContainer } from "@/containers";
+
 const Page = () => {
-    return <div>Page</div>;
+    return <ProfileContainer />;
 };
 
 export default Page;

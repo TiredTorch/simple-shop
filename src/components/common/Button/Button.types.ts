@@ -4,5 +4,5 @@ export type ButtonProps = DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
 > & {
-    buttonVariation: "headerButton" | "modalButton";
+    buttonVariation: "headerButton" | "modalButton" | "profileButton";
 };

@@ -9,6 +9,7 @@ export const ProductsContainer = () => {
     const [selectedProductItem, setSelectedProductItem] =
         useState<ProductComponent | null>(null);
 
+    // TODO check if it already works as useCallback
     const resetProductItemSelection = () => {
         setSelectedProductItem(null);
     };
@@ -17,6 +18,7 @@ export const ProductsContainer = () => {
         setSelectedProductItem(productItem);
     };
 
+    //TODO install faker
     const testProduct: ProductComponent = {
         image: "",
         price: 220,

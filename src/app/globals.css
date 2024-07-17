@@ -28,3 +28,13 @@ body {
         hover:border-slate-600 
         hover:text-slate-800;
 }
+
+.profileButton {
+    @apply text-4xl
+        font-medium
+        border-4
+        border-slate-500
+        text-slate-600
+        hover:border-slate-600 
+        hover:text-slate-800;
+}
