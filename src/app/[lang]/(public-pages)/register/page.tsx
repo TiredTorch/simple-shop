@@ -1,5 +1,7 @@
+import { RegisterContainer } from "@/containers";
+
 const Page = () => {
-    return <div>Page</div>;
+    return <RegisterContainer />;
 };
 
 export default Page;

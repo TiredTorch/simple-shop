@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-}
-
 body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-        )
-        rgb(var(--background-start-rgb));
+    @apply w-[100dvw] h-[100dvh] bg-slate-300;
 }
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
+.rootButton {
+    @apply border-2 
+    font-bold 
+    px-4 py-2 
+    rounded-lg 
+    transition-colors;
+}
+
+.headerButton {
+    @apply border-slate-600 
+        text-slate-300 
+        hover:border-slate-400 
+        hover:text-slate-100;
+}
+
+.modalButton {
+    @apply font-semibold 
+        border-slate-500 
+        text-slate-600 
+        hover:border-slate-600 
+        hover:text-slate-800;
 }
