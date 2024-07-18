@@ -1,9 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import {
-	Button,
-	Logo
-} from "@/components";
+import { Button, Logo } from "@/components";
 
 export const Header = () => {
     const router = useRouter();

@@ -1,7 +1,4 @@
-import React, {
-	FC,
-	PropsWithChildren
-} from "react";
+import React, { FC, PropsWithChildren } from "react";
 import { PrivateRoute } from "@/hocs";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
