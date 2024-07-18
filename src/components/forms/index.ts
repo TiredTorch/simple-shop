@@ -1,1 +1,1 @@
-export * from "./CreditCardForm/CreditCardForm";
+export * from "./CheckoutForm/CheckoutForm";

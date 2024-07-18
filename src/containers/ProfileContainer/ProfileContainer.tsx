@@ -29,9 +29,6 @@ export const ProfileContainer = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                {/* <CreditCardForm onSubmit={console.log} initState={{}} /> */}
-            </div>
             <div className="flex justify-evenly w-full">
                 <Button
                     buttonVariation="profileButton"

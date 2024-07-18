@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ProductComponent } from "@/types";
 import { ProductDetailsModal } from "./ProductDetailsModal/ProductDetailsModal";
 import ProductItem from "./ProductItem/ProductItem";
@@ -9,14 +9,16 @@ export const ProductsContainer = () => {
     const [selectedProductItem, setSelectedProductItem] =
         useState<ProductComponent | null>(null);
 
-    // TODO check if it already works as useCallback (-)
-    const resetProductItemSelection = () => {
+    const resetProductItemSelection = useCallback(() => {
         setSelectedProductItem(null);
-    };
+    }, [setSelectedProductItem]);
 
-    const selectProductItem = (productItem: ProductComponent) => () => {
-        setSelectedProductItem(productItem);
-    };
+    const selectProductItem = useCallback(
+        (productItem: ProductComponent) => () => {
+            setSelectedProductItem(productItem);
+        },
+        [setSelectedProductItem]
+    );
 
     // TODO check faker with next js
     const testProduct: ProductComponent = useMemo(

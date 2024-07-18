@@ -9,5 +9,7 @@ export type ButtonProps = DetailedHTMLProps<
         | "modalButton"
         | "profileButton"
         | "cartItemButton"
-        | "authButton";
+        | "authButton"
+        | "cartAmountButton"
+        | "checkoutFormButton";
 };

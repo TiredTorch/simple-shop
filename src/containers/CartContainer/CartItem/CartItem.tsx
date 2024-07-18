@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useCallback, useState } from "react";
 import { Button } from "@/components";
 import { CartItemProps } from "./CartItem.types";
 
@@ -7,14 +7,43 @@ export const CartItem: FC<CartItemProps> = ({
     handleOrder,
     handleRemove,
     amount,
+    pricePerOne,
+    image,
+    name,
 }) => {
+    const [itemsAmount, setItemsAmount] = useState(amount);
+
+    const handleAddItemsAmount = useCallback(() => {
+        setItemsAmount((prev) => prev + 1);
+    }, [setItemsAmount]);
+
+    const handleReduceItemsAmount = useCallback(() => {
+        setItemsAmount((prev) => (prev === 1 ? 1 : prev - 1));
+    }, [setItemsAmount]);
+
     return (
         <div className="flex items-center w-full justify-between bg-slate-500 px-8 py-4 text-slate-800 rounded-sm">
-            <div className="flex gap-6">
-                <Image src={""} alt="" />
-                <div className="font-semibold">name</div>
-                <div>amount</div> {/*TODO add counter to change amount*/}
-                <div className="font-semibold">total price</div>
+            <div className="flex gap-16 items-center">
+                <Image src={image} alt="itemImage" />
+                <div className="font-semibold">{name}</div>
+                <div className="flex items-center gap-1">
+                    <Button
+                        buttonVariation={"cartAmountButton"}
+                        onClick={handleReduceItemsAmount}
+                    >
+                        -
+                    </Button>
+                    {itemsAmount}
+                    <Button
+                        buttonVariation={"cartAmountButton"}
+                        onClick={handleAddItemsAmount}
+                    >
+                        +
+                    </Button>
+                </div>
+                <div className="font-semibold">
+                    {pricePerOne * itemsAmount}$
+                </div>
             </div>
             <div className="flex gap-6">
                 <Button

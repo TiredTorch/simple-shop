@@ -1,5 +1,7 @@
+import { StatusContainer } from "@/containers";
+
 const Page = () => {
-    return <div>stat</div>;
+    return <StatusContainer />;
 };
 
 export default Page;
