@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FC } from "react";
-
 import { ProductStatus } from "./ProductStatus/ProductStatus";
 import { StatusItemProps } from "./StatusItem.types";
 

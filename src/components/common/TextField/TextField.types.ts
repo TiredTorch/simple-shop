@@ -5,4 +5,5 @@ export type TextFieldProps = DetailedHTMLProps<
     HTMLInputElement
 > & {
     label?: string;
+    textFieldVariation: "cardForm" | "productSearchForm";
 };

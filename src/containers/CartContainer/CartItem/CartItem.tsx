@@ -23,7 +23,7 @@ export const CartItem: FC<CartItemProps> = ({
 
     return (
         <div className="flex items-center w-full justify-between bg-slate-500 px-8 py-4 text-slate-800 rounded-sm">
-            <div className="flex gap-10 items-start xl:items-center flex-col xl:flex-row xl:gap-16">
+            <div className="flex gap-6 items-start xl:items-center flex-col xl:flex-row xl:gap-16">
                 <Image src={image} alt="itemImage" />
                 <div className="font-semibold">{name}</div>
                 <div className="flex items-center gap-1">

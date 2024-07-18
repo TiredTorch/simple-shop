@@ -5,6 +5,29 @@
 body {
     @apply w-[100dvw] h-[100dvh] bg-slate-300;
 }
+/* //TODO field styles with no selection ring (+) */
+
+.rootTextField {
+    @apply border-2
+    rounded-md
+    font-semibold 
+    text-lg 
+    px-2 py-1
+    focus:ring-0 
+    focus:border-slate-500 
+    ring-0;
+}
+
+.cardForm {
+    @apply border-slate-500 
+    text-slate-700 
+    bg-slate-300;
+}
+
+.productSearchForm {
+    @apply text-base
+    w-full;
+}
 
 .rootButton {
     @apply border-2 

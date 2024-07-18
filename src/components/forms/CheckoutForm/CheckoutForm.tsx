@@ -17,28 +17,34 @@ export const CheckoutForm: FC<FormProps<CheckoutData>> = ({
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="name"
+                                textFieldVariation={"cardForm"}
                             />
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="number"
+                                textFieldVariation={"cardForm"}
                             />
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="post department"
+                                textFieldVariation={"cardForm"}
                             />
                         </div>
                         <div className="flex flex-col gap-4">
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="card number"
+                                textFieldVariation={"cardForm"}
                             />
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="date"
+                                textFieldVariation={"cardForm"}
                             />
                             <TextField
                                 className="flex justify-between gap-4"
                                 label="cvv"
+                                textFieldVariation={"cardForm"}
                             />
                         </div>
                     </div>

@@ -1,19 +1,8 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, MiddlePositionContaner } from "@/components";
 
 export const ProfileContainer = () => {
-    const router = useRouter();
-
-    const handleNavigateToCart = useCallback(() => {
-        router.push("/en/cart");
-    }, [router]);
-
-    const handleNavigateToOrders = useCallback(() => {
-        router.push("/en/status");
-    }, [router]);
-
     return (
         <MiddlePositionContaner>
             <div className="flex w-full sm:flex-row flex-col items-center gap-4">
