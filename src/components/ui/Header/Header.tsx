@@ -10,7 +10,7 @@ export const Header = () => {
     };
 
     return (
-        <div className="w-full h-[6rem] bg-slate-500 text-cyan-400 flex justify-between items-center px-20">
+        <div className="w-full h-[6rem] bg-slate-500 text-cyan-400 flex justify-between items-center px-4 sm:px-20">
             <Logo />
             <Button
                 buttonVariation="headerButton"

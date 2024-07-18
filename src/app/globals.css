@@ -11,6 +11,8 @@ body {
     font-bold 
     px-4 py-2 
     rounded-lg 
+    sm:text-base
+    text-base/4
     transition-colors;
 }
 
@@ -23,7 +25,8 @@ body {
 
 .modalButton {
     @apply font-semibold 
-        text-2xl
+        sm:text-2xl
+        text-2xl/4
         border-slate-500 
         text-slate-600 
         hover:border-slate-600 
@@ -49,7 +52,8 @@ body {
 }
 
 .authButton {
-    @apply text-3xl
+    @apply sm:text-3xl
+        text-xl
         duration-500
         border-slate-400 
         text-slate-600 

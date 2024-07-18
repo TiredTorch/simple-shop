@@ -5,8 +5,6 @@ import { StatusItem } from "./StatusItem/StatusItem";
 export const StatusContainer = () => {
     return (
         <MiddlePositionContaner>
-            {" "}
-            {/*TODO config types for status item*/}
             <div className="w-full h-full flex flex-col gap-6">
                 <StatusItem
                     image={""}
