@@ -34,7 +34,8 @@ body {
 }
 
 .profileButton {
-    @apply text-4xl
+    @apply sm:text-4xl
+        text-2xl
         font-medium
         border-4
         border-slate-500
