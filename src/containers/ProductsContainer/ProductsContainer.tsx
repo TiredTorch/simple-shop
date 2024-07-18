@@ -1,9 +1,5 @@
 "use client";
-import {
-	useCallback,
-	useMemo,
-	useState
-} from "react";
+import { useCallback, useMemo, useState } from "react";
 import { ProductComponent } from "@/types";
 import { ProductDetailsModal } from "./ProductDetailsModal/ProductDetailsModal";
 import ProductItem from "./ProductItem/ProductItem";

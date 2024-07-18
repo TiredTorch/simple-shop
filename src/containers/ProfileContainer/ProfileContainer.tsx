@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-	Button,
-	MiddlePositionContaner
-} from "@/components";
+import { Button, MiddlePositionContaner } from "@/components";
 
 export const ProfileContainer = () => {
     return (
