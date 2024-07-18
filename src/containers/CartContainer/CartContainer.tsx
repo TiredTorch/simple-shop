@@ -19,7 +19,7 @@ export const CartContainer = () => {
         (cartItem: CartItemComponent) => (updatedAmount: number) => () => {
             router.push("/en/checkout");
         },
-        []
+        [router]
     );
 
     const handleRemoveCartItem = useCallback(
