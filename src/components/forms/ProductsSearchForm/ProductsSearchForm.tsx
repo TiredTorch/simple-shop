@@ -25,7 +25,10 @@ export const ProductsSearchForm: FC<FormProps<ProductsSearchData>> = ({
                             label={"Avalivable"}
                             checked={false}
                         />
-                        <Button buttonVariation={"searchProductButton"}>
+                        <Button
+                            buttonVariation={"searchProductButton"}
+                            type="submit"
+                        >
                             Search
                         </Button>
                     </div>

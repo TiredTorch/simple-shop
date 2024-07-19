@@ -1,6 +1,7 @@
 "use client";
+import { useParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
-import { ProductComponent } from "@/types";
+import { ProductComponent, ProductsSearchData } from "@/types";
 import { ProductDetailsModal } from "./ProductDetailsModal/ProductDetailsModal";
 import ProductItem from "./ProductItem/ProductItem";
 import { ProductsFilterSidebar } from "./ProductsFilterSidebar/ProductsFilterSidebar";
@@ -8,6 +9,20 @@ import { ProductsFilterSidebar } from "./ProductsFilterSidebar/ProductsFilterSid
 export const ProductsContainer = () => {
     const [selectedProductItem, setSelectedProductItem] =
         useState<ProductComponent | null>(null);
+
+    const router = useRouter();
+    const searchParams = useParams();
+
+    console.log("searchParams", searchParams);
+
+    const handleSearchProduct = useCallback(
+        (productsSearchData: ProductsSearchData) => {
+            router.push(
+                `/en/products?name=${productsSearchData.name}&maxPrice=${productsSearchData.maxPrice}&isAvalivable=${productsSearchData.isAvalivable}`
+            );
+        },
+        [router]
+    );
 
     const resetProductItemSelection = useCallback(() => {
         setSelectedProductItem(null);
@@ -34,7 +49,7 @@ export const ProductsContainer = () => {
     return (
         <>
             <div className="h-[calc(100dvh-6rem)] flex">
-                <ProductsFilterSidebar />
+                <ProductsFilterSidebar submitFilter={handleSearchProduct} />
                 <div className="flex p-6 flex-col flex-wrap gap-6 w-[100dvw] max-w-[100dvw] overflow-auto">
                     <ProductItem
                         handleSelectComponent={selectProductItem(testProduct)}

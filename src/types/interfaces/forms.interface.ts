@@ -9,7 +9,6 @@ export type CheckoutData = {
 
 export type ProductsSearchData = {
     name: string;
-    minPrice: number;
     maxPrice: number;
     isAvalivable: boolean;
 };
