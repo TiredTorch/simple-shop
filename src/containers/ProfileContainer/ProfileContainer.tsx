@@ -6,7 +6,11 @@ export const ProfileContainer = () => {
     return (
         <MiddlePositionContaner>
             <div className="flex w-full sm:flex-row flex-col items-center gap-4">
-                <Image alt="avatar" src={""} className="w-3/5" />
+                <Image
+                    alt="avatar"
+                    src={""}
+                    className="w-3/5"
+                />
                 <div className="flex flex-col items-center w-2/5 gap-4">
                     <div className="sm:text-4xl text-2xl text-cyan-700 font-bold">
                         Username

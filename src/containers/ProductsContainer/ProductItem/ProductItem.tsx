@@ -14,7 +14,11 @@ const ProductItem: FC<ProductItemProps> = ({
             onClick={handleSelectComponent}
         >
             <div className="flex w-full h-3/5">
-                <Image src={image} alt={"product image"} className="w-full" />
+                <Image
+                    src={image}
+                    alt={"product image"}
+                    className="w-full"
+                />
                 <div className="text-cyan-700 font-semibold w-full flex items-center justify-center text-xl">
                     {price}$
                 </div>

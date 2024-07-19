@@ -1,23 +1,33 @@
 "use client";
 import { Form, Formik } from "formik";
 import React, { FC } from "react";
-import { Checkbox, Slider, TextField } from "@/components/common";
+import { Button, Checkbox, Slider, TextField } from "@/components/common";
 import { FormProps, ProductsSearchData } from "@/types";
 
 export const ProductsSearchForm: FC<FormProps<ProductsSearchData>> = ({
     initState,
     onSubmit,
 }) => {
-    // TODO update prettier rules
-    // TODO check slider and checkbox with tailwind
     return (
-        <Formik initialValues={initState} onSubmit={onSubmit}>
+        <Formik
+            initialValues={initState}
+            onSubmit={onSubmit}
+        >
             {() => (
                 <Form>
-                    <div>
-                        <TextField textFieldVariation={"productSearchForm"} />
+                    <div className="flex flex-col gap-7 w-full pt-10">
+                        <TextField
+                            textFieldVariation={"productSearchForm"}
+                            placeholder="Search some products"
+                        />
                         <Slider />
-                        <Checkbox />
+                        <Checkbox
+                            label={"Avalivable"}
+                            checked={false}
+                        />
+                        <Button buttonVariation={"searchProductButton"}>
+                            Search
+                        </Button>
                     </div>
                 </Form>
             )}

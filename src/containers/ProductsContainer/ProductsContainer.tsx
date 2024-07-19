@@ -20,14 +20,12 @@ export const ProductsContainer = () => {
         [setSelectedProductItem]
     );
 
-    // TODO check faker with next js
     const testProduct: ProductComponent = useMemo(
         () => ({
             image: "",
             price: 220,
             description:
                 "asd asd as fas df sd f sd fs df sd f sd fs dfsdfasdasdas asdas d asfsdfsd fsdfsd",
-            // name: faker.lorem.words(3),
             name: "dasfjaskjf jasdhflkjs dkjsdhf lsslkdjfhs ikjh sdfsdf sdfsd fsdfdssdfddfsfdsfsdfsd",
         }),
         []
@@ -37,7 +35,7 @@ export const ProductsContainer = () => {
         <>
             <div className="h-[calc(100dvh-6rem)] flex">
                 <ProductsFilterSidebar />
-                <div className="flex p-6 flex-col flex-wrap gap-6 w-[calc(100dvw-12rem)] max-w-[calc(100dvw-12rem)] overflow-auto">
+                <div className="flex p-6 flex-col flex-wrap gap-6 w-[100dvw] max-w-[100dvw] overflow-auto">
                     <ProductItem
                         handleSelectComponent={selectProductItem(testProduct)}
                         {...testProduct}

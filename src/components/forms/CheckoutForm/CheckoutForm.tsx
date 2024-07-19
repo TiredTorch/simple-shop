@@ -9,7 +9,10 @@ export const CheckoutForm: FC<FormProps<CheckoutData>> = ({
     onSubmit,
 }) => {
     return (
-        <Formik initialValues={initState} onSubmit={onSubmit}>
+        <Formik
+            initialValues={initState}
+            onSubmit={onSubmit}
+        >
             {() => (
                 <Form className="flex flex-col items-center gap-10 justify-center h-full w-full">
                     <div className="flex gap-6">

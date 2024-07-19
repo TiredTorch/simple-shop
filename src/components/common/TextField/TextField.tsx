@@ -14,7 +14,10 @@ export const TextField: FC<TextFieldProps> = ({
                     {label}
                 </label>
             )}
-            <input className={`rootTextField ${textFieldVariation}`} />
+            <input
+                className={`rootTextField ${textFieldVariation}`}
+                {...rest}
+            />
         </div>
     );
 };

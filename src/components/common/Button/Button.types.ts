@@ -11,5 +11,7 @@ export type ButtonProps = DetailedHTMLProps<
         | "cartItemButton"
         | "authButton"
         | "cartAmountButton"
-        | "checkoutFormButton";
+        | "checkoutFormButton"
+        | "searchProductButton"
+        | "searchFilterButton";
 };

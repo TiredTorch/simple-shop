@@ -28,7 +28,10 @@ export const ProductDetailsModal: FC<PropsForModal<ProductComponent>> = ({
                 </div>
                 <div className="flex w-full justify-between">
                     <Button buttonVariation="modalButton">Add to cart</Button>
-                    <Button buttonVariation="modalButton" onClick={handleClose}>
+                    <Button
+                        buttonVariation="modalButton"
+                        onClick={handleClose}
+                    >
                         Cancel
                     </Button>
                 </div>
