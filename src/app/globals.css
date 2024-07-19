@@ -51,7 +51,7 @@ body {
 .modalButton {
     @apply font-semibold 
         sm:text-2xl
-        text-2xl/4
+        text-lg
         border-slate-500 
         text-slate-600 
         hover:border-slate-600 
@@ -115,14 +115,18 @@ body {
 }
 
 .searchFilterButton {
-    @apply absolute
-        translate-x-full
-        bottom-2
-        -right-0
+    @apply sm:absolute
+        fixed
+        left-1/2
+        -translate-x-1/2
+        bottom-8
+        sm:translate-x-full
+        sm:bottom-2
+        sm:right-[.25px]
         bg-slate-400
         border-slate-600
         text-slate-800
         hover:text-slate-600
-        border-l-0
-        rounded-l-none;
+        sm:border-l-0
+        sm:rounded-l-none;
 }

@@ -15,7 +15,7 @@ export const CheckoutForm: FC<FormProps<CheckoutData>> = ({
         >
             {() => (
                 <Form className="flex flex-col items-center gap-10 justify-center h-full w-full">
-                    <div className="flex gap-6">
+                    <div className="flex gap-6 sm:flex-row flex-col">
                         <div className="flex flex-col gap-4">
                             <TextField
                                 className="flex justify-between gap-4"

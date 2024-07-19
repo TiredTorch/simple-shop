@@ -11,7 +11,7 @@ export const ProductsFilterSidebar = () => {
 
     return (
         <div
-            className={`bg-slate-400 w-72 px-2 py-4 h-[calc(100dvh-6rem)] absolute bottom-0 ${isFilterOpen ? "-left-72" : "left-0"} transition-all border-r-2 border-slate-600`}
+            className={`bg-slate-400 sm:w-72 w-[100dvw] px-2 py-4 h-[calc(100dvh-6rem)] absolute bottom-0 ${isFilterOpen ? "sm:-left-72" : "sm:left-0"} ${isFilterOpen ? "-left-[100dvw]" : "left-0"} transition-all border-r-2 border-slate-600`}
         >
             <ProductsSearchForm
                 onSubmit={console.log}
@@ -26,7 +26,7 @@ export const ProductsFilterSidebar = () => {
                 buttonVariation={"searchFilterButton"}
                 onClick={handleToggleFilterBar}
             >
-                Filter
+                Toggle Filter
             </Button>
         </div>
     );
