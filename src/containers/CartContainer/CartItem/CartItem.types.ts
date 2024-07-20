@@ -1,6 +1,6 @@
-import { CartItemComponent } from "@/types";
+import { CartItemDto } from "@/types";
 
-export type CartItemProps = CartItemComponent & {
+export type CartItemProps = CartItemDto & {
     handleOrder: (amount: number) => () => void;
     handleRemove: VoidFunction;
 };

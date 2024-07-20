@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React, { FC } from "react";
 import { Button, ModalOverlay } from "@/components";
-import { ProductComponent, PropsForModal } from "@/types";
+import { ProductDto, PropsForModal } from "@/types";
 
-export const ProductDetailsModal: FC<PropsForModal<ProductComponent>> = ({
+export const ProductDetailsModal: FC<PropsForModal<ProductDto>> = ({
     description,
     image,
     name,

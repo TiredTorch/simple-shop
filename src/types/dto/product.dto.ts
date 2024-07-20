@@ -1,4 +1,4 @@
-export type ProductComponent = {
+export type ProductDto = {
     name: string;
     image: string;
     price: number;

@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
 import { MiddlePositionContaner } from "@/components";
-import { CartItemComponent } from "@/types";
+import { CartItemDto } from "@/types";
 import { CartItem } from "./CartItem/CartItem";
 
 export const CartContainer = () => {
@@ -16,14 +16,14 @@ export const CartContainer = () => {
     };
 
     const handleOrderCartItem = useCallback(
-        (cartItem: CartItemComponent) => (updatedAmount: number) => () => {
+        (cartItem: CartItemDto) => (updatedAmount: number) => () => {
             router.push("/en/checkout");
         },
         [router]
     );
 
     const handleRemoveCartItem = useCallback(
-        (cartItem: CartItemComponent) => () => {},
+        (cartItem: CartItemDto) => () => {},
         []
     );
 

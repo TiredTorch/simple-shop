@@ -1,14 +1,14 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
-import { ProductComponent, ProductsSearchData } from "@/types";
+import { ProductDto, ProductsSearchData } from "@/types";
 import { ProductDetailsModal } from "./ProductDetailsModal/ProductDetailsModal";
 import ProductItem from "./ProductItem/ProductItem";
 import { ProductsFilterSidebar } from "./ProductsFilterSidebar/ProductsFilterSidebar";
 
 export const ProductsContainer = () => {
     const [selectedProductItem, setSelectedProductItem] =
-        useState<ProductComponent | null>(null);
+        useState<ProductDto | null>(null);
 
     const router = useRouter();
     const searchParams = useParams();
@@ -29,13 +29,13 @@ export const ProductsContainer = () => {
     }, [setSelectedProductItem]);
 
     const selectProductItem = useCallback(
-        (productItem: ProductComponent) => () => {
+        (productItem: ProductDto) => () => {
             setSelectedProductItem(productItem);
         },
         [setSelectedProductItem]
     );
 
-    const testProduct: ProductComponent = useMemo(
+    const testProduct: ProductDto = useMemo(
         () => ({
             image: "",
             price: 220,

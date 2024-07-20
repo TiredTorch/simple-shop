@@ -1,4 +1,4 @@
-export type CartItemComponent = {
+export type CartItemDto = {
     image: string;
     name: string;
     amount: number;

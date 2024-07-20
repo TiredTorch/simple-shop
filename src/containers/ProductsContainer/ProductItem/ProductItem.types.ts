@@ -1,5 +1,5 @@
-import { ProductComponent } from "@/types";
+import { ProductDto } from "@/types";
 
-export type ProductItemProps = ProductComponent & {
+export type ProductItemProps = ProductDto & {
     handleSelectComponent: VoidFunction;
 };

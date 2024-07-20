@@ -2,7 +2,7 @@ export const GET = async () => {
     return Response.json({ a: 1 });
 };
 
-export const UPDATE = async () => {
+export const PATCH = async () => {
     return Response.json({ a: 1 });
 };
 
