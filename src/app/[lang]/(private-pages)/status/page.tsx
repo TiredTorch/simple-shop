@@ -1,6 +1,6 @@
 import { StatusContainer } from "@/containers";
 
-const Page = () => {
+const Page = async () => {
     return <StatusContainer />;
 };
 
