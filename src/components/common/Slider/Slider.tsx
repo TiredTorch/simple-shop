@@ -8,6 +8,7 @@ export const Slider: FC<SliderProps> = () => {
                 id="labels-range-input"
                 type="range"
                 value="1000"
+                onChange={console.log}
                 min="100"
                 max="1500"
                 className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer"

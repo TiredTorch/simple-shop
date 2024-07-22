@@ -25,6 +25,7 @@ export const CartItem: FC<CartItemProps> = ({
         <div className="flex items-center w-full justify-between bg-slate-500 px-8 py-4 text-slate-800 rounded-sm">
             <div className="flex gap-6 items-start xl:items-center flex-col xl:flex-row xl:gap-16">
                 <Image
+                    fill
                     src={image}
                     alt="itemImage"
                 />

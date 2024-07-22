@@ -24,6 +24,7 @@ export const ProductsSearchForm: FC<FormProps<ProductsSearchData>> = ({
                         <Checkbox
                             label={"Avalivable"}
                             checked={false}
+                            onChange={console.log}
                         />
                         <Button
                             buttonVariation={"searchProductButton"}

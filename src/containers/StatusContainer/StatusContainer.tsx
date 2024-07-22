@@ -1,46 +1,22 @@
+import { FC } from "react";
 import { MiddlePositionContaner } from "@/components";
-import { PurchaseStatus } from "@/types";
+import { StatusContainerProps } from "./StatusContainer.types";
 import { StatusItem } from "./StatusItem/StatusItem";
 
-export const StatusContainer = () => {
+export const StatusContainer: FC<StatusContainerProps> = ({
+    productStatuses,
+}) => {
     return (
         <MiddlePositionContaner>
             <div className="w-full h-full flex flex-col gap-6">
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.APPROVED}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.DELIVERING}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.PENDING}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.PENDING}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.RECEIVED}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.REJECTED}
-                />
-                <StatusItem
-                    image={""}
-                    name={"123"}
-                    status={PurchaseStatus.RECEIVED}
-                />
+                {productStatuses.map((item, i) => (
+                    <StatusItem
+                        key={i}
+                        image={item.image}
+                        name={item.name}
+                        status={item.status}
+                    />
+                ))}
             </div>
         </MiddlePositionContaner>
     );

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem should render cart item 1`] = `
+<div>
+  <div
+    class="flex items-center w-full justify-between bg-slate-500 px-8 py-4 text-slate-800 rounded-sm"
+  >
+    <div
+      class="flex gap-6 items-start xl:items-center flex-col xl:flex-row xl:gap-16"
+    >
+      <img
+        alt="itemImage"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        sizes="100vw"
+        src="/_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=3840&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fpicsum.photos%2Fseed%2FG1Far%2F640%2F480&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+      <div
+        class="font-semibold"
+      >
+        Asha
+      </div>
+      <div
+        class="flex items-center gap-1"
+      >
+        <button
+          class="
+                undefined
+                rootButton
+                cartAmountButton
+            "
+        >
+          -
+        </button>
+        6119792004038656
+        <button
+          class="
+                undefined
+                rootButton
+                cartAmountButton
+            "
+        >
+          +
+        </button>
+      </div>
+      <div
+        class="font-semibold"
+      >
+        9.955689452858738e+30
+        $
+      </div>
+    </div>
+    <div
+      class="flex gap-6 flex-col xl:flex-row"
+    >
+      <button
+        class="
+                undefined
+                rootButton
+                cartItemButton
+            "
+      >
+        Order
+      </button>
+      <button
+        class="
+                undefined
+                rootButton
+                cartItemButton
+            "
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
+`;

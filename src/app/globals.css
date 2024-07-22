@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* TODO add scrollbar */
 body {
     @apply w-[100dvw] h-[100dvh] bg-slate-300;
 }
